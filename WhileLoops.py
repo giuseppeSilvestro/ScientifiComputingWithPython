@@ -6,7 +6,7 @@ import sys
 # the next variable is uppercase because it is a constant
 MASTER_PASSWORD = 'ciaone'
 # ask the user to input a password
-password = input('Please eneter the password: ')
+password = input('Please enter the password: ')
 attempts = 2
 # check if the passoword right, if not ask again
 # give only 3 attempts
