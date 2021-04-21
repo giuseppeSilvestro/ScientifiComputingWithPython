@@ -13,18 +13,16 @@ print(purse['candy'])
 languages = {'Gennaro' : 2, 'Giuseppe' : 3, 'Giovanni' : 5}
 print(languages)
 
-# one of the most common application of dictionaries is counting
-counts = dict()
-names = ['Gennaro', 'Giuseppe', 'Gennaro', 'Giovanni']
-for name in names :
-    if name not in counts :
-        counts[name] = 1
-    else :
-        counts[name] += 1
-print(counts)
+# you can create lists from dictionaries. you can use keys or values
+names = list(languages)
+print(names)
+# another way
+names_1 = languages.keys()
+print(names_1)
 
-# we can simplify this loop using 'get()'
-counts_2 = dict()
-for name in names :
-    counts_2[name] = counts_2.get(name, 0) + 1
-print(counts_2)
+values = languages.values()
+print(values)
+
+# you can also create a tuple from dictionaries
+items = languages.items()
+print(items)
