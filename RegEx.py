@@ -29,3 +29,11 @@ for line in handle:
     line = line.rstrip()
     if re.search('^print', line):
         print(line)
+
+# search() returns true or false.
+# findall() returns something
+x = 'My 2 favourite numbers are 19 and 42'
+y = re.findall('[0-9]+', x)
+print(y)
+y = re.findall('[aeiou]+', x)
+print(y)
