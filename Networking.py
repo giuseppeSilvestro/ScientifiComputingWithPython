@@ -8,7 +8,7 @@ mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 mysock.connect(('data.pr4e.org', 80))
 # the next line prepares a command to get something stored on that webserver
 # it is important not to forget the two whitespaces at the end of our command ('\n\n')
-# the encode function will allow us to send this command
+# the encode function will transform the string in a Bytes array UTF-8
 cmd = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\r\n\r\n'.encode()
 # now we can send our request
 mysock.send(cmd)
@@ -19,6 +19,7 @@ while True:
     data = mysock.recv(512)
     if (len(data) < 1):
         break
+# the decode function will transform the Bytes array UTF-8 in a string
     print(data.decode())
 # after the loop is finished we can close our connection
 mysock.close()
