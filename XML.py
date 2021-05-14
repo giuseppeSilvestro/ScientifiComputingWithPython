@@ -1,4 +1,4 @@
-# Here we are goint to use XML in python
+# Here we are goint to use Python to process XML
 # First we need to import a new package and we are going to save it as ET to save us time
 import xml.etree.ElementTree as ET
 
